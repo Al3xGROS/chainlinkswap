@@ -1,12 +1,12 @@
 import { getDefaultWallets } from '@rainbow-me/rainbowkit'
-import { configureChains, createConfig } from 'wagmi'
+import { configureChains, createConfig, sepolia } from 'wagmi'
 import { goerli, mainnet } from 'wagmi/chains'
 import { publicProvider } from 'wagmi/providers/public'
 
 const walletConnectProjectId = '7d45b7f8d2b92af479fe84b659c1c3ef'
 
 const { chains, publicClient, webSocketPublicClient } = configureChains(
-  [mainnet, ...(process.env.NODE_ENV === 'development' ? [goerli] : [])],
+  [mainnet, ...(process.env.NODE_ENV === 'development' ? [sepolia] : [])],
   [
     publicProvider(),
   ],

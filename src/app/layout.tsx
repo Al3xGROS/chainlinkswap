@@ -1,5 +1,6 @@
 import '@rainbow-me/rainbowkit/styles.css'
 import { Providers } from './providers'
+import '../globals.css'
 
 export const metadata = {
   title: 'wagmi',
